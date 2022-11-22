@@ -15,14 +15,14 @@ namespace UnityAtoms.SceneMgmt
         /// Scene to change to.
         /// </summary>
         [SerializeField]
-        private StringReference _sceneName = null;
+        private SceneFieldReference _scene = null;
 
         /// <summary>
         /// Change the scene.
         /// </summary>
         public override void Do()
         {
-            SceneManager.LoadScene(_sceneName.Value);
+            SceneManager.LoadScene(_scene.Value);
         }
     }
 }
